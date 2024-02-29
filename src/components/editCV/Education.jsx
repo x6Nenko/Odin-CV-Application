@@ -21,23 +21,25 @@ const Education = ({ educationState, handleChange, children }) => {
         onChange={handleChange}
       />
 
-      <Input 
-        type={"text"}
-        labelText={"When Started: "}
-        name={"startDate"}
-        value={educationState.startDate}
-        onChange={handleChange}
-        placeHolder={"MM/YYYY"}
-      />
+      <div className="pairInputs">
+        <Input 
+          type={"text"}
+          labelText={"When Started: "}
+          name={"startDate"}
+          value={educationState.startDate}
+          onChange={handleChange}
+          placeHolder={"MM/YYYY"}
+        />
 
-      <Input 
-        type={"text"}
-        labelText={"When Finished: "}
-        name={"finishDate"}
-        value={educationState.finishDate}
-        onChange={handleChange}
-        placeHolder={"MM/YYYY"}
-      />
+        <Input 
+          type={"text"}
+          labelText={"When Finished: "}
+          name={"finishDate"}
+          value={educationState.finishDate}
+          onChange={handleChange}
+          placeHolder={"MM/YYYY"}
+        />
+      </div>
     </section>
   )
 }

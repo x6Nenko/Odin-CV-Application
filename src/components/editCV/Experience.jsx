@@ -29,23 +29,25 @@ const Experience = ({ experienceState, handleChange, children }) => {
         onChange={handleChange}
       />
 
-      <Input 
-        type={"text"}
-        labelText={"When Started: "}
-        name={"startDate"}
-        value={experienceState.startDate}
-        onChange={handleChange}
-        placeHolder={"MM/YYYY"}
-      />
+      <div className="pairInputs">
+        <Input 
+          type={"text"}
+          labelText={"When Started: "}
+          name={"startDate"}
+          value={experienceState.startDate}
+          onChange={handleChange}
+          placeHolder={"MM/YYYY"}
+        />
 
-      <Input 
-        type={"text"}
-        labelText={"When Finished: "}
-        name={"finishDate"}
-        value={experienceState.finishDate}
-        onChange={handleChange}
-        placeHolder={"MM/YYYY"}
-      />
+        <Input 
+          type={"text"}
+          labelText={"When Finished: "}
+          name={"finishDate"}
+          value={experienceState.finishDate}
+          onChange={handleChange}
+          placeHolder={"MM/YYYY"}
+        />
+      </div>
     </section>
   )
 }

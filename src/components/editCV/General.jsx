@@ -1,9 +1,10 @@
 import "../../styles/editCV.css"
 import Input from "../Input"
 
-const General = ({ generalState, handleChange }) => {
+const General = ({ generalState, handleChange, children }) => {
   return (
     <section className="generalSection">
+      {children}
       <div className="pairInputs">
         <Input 
           type={"text"}

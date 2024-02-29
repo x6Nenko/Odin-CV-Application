@@ -95,13 +95,14 @@ const App = () => {
       <div className='wrapper'>
         {mode === "edit" && 
           <>
-            <div>
-              Edit mode
+            <div className='generalWrapper'>
+              <General 
+                generalState={general}
+                handleChange={handleGeneralChanges}
+              >
+                <h2 className='sectionTitle generalTitle'>General Information</h2>
+              </General>
             </div>
-            <General 
-              generalState={general}
-              handleChange={handleGeneralChanges}
-            />
 
             <div className='pairSections'>
               <div className='educationWrapper'>
@@ -111,13 +112,16 @@ const App = () => {
                     educationState={entry}
                     handleChange={event => handleEducationChanges(event, index)}
                   >
+                    <div className='entryIndex'>
+                      <span>{index + 1}</span>
+                    </div>
                     {index === 0 && 
-                      <>
-                        <div>
-                          <h2>Educational Experience</h2>
-                        </div>
-                        <button onClick={handleAddMoreEducationBtn} className='addMoreBtn'>Add more</button>
-                      </>
+                    <>
+                      <div className='sectionHeader'>
+                        <h2 className='sectionTitle'>Educational Experience</h2>
+                      </div>
+                      <button onClick={handleAddMoreEducationBtn} className='addMoreBtn'>Add more</button>
+                    </>
                     }
                   </Education>
                 ))}
@@ -130,7 +134,17 @@ const App = () => {
                     experienceState={entry}
                     handleChange={event => handleExperienceChanges(event, index)}
                   >
-                    {index === 0 && <button onClick={handleAddMoreExperienceBtn} className='addMoreBtn'>Add more</button>}
+                    <div className='entryIndex'>
+                      <span>{index + 1}</span>
+                    </div>
+                    {index === 0 && 
+                    <>
+                      <div className='sectionHeader'>
+                        <h2 className='sectionTitle'>Practical Experience</h2>
+                      </div>
+                      <button onClick={handleAddMoreExperienceBtn} className='addMoreBtn'>Add more</button>
+                    </>
+                    }
                   </Experience>
                 ))}
               </div>

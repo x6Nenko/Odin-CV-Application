@@ -1,6 +1,14 @@
 .wrapper {
     margin: 30px auto 0;
     max-width: 1024px;
+    padding-bottom: 30px;
+}
+
+.generalWrapper {
+    background-color: #fffbef;
+    border-radius: 30px;
+    height: fit-content;
+    padding: 10px; 
 }
 
 .educationWrapper {
@@ -17,7 +25,7 @@
     padding: 10px;
 }
 
-.educationWrapper, .experienceWrapper {
+.educationWrapper, .experienceWrapper, .generalWrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -34,5 +42,12 @@
 button {
     padding: 10px 30px;
     width: fit-content;
-    
+    border: none;
+    background-color: #121212;
+    color: #fff;
+    border-radius: 5px;
+}
+
+button:hover, button:focus {
+    background-color: #2c2c2c;
 }

@@ -7,7 +7,7 @@ section {
     border: 1px solid #d1d1d1;
     padding: 30px;
     border-radius: 20px;
-    max-width: 768px;
+    
 
     background-color: #f5f5f599;
 }
@@ -19,4 +19,35 @@ section {
 .pairInputs {
     display: flex;
     gap: 30px;
+}
+
+.sectionTitle {
+    text-align: center;
+}
+
+.generalTitle {
+    margin-bottom: 20px;
+}
+
+.addMoreBtn {
+    margin: 0 auto 20px;
+}
+
+.entryIndex {
+    display: grid;
+    place-content: center;
+    height: 32px;
+    width: 32px;
+    background-color: #75757530;
+    border: 1px solid #121212;
+    color: #000;
+    border-radius: 100px;
+    font-weight: 900;
+    margin: auto;
+}
+
+.sectionHeader {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
