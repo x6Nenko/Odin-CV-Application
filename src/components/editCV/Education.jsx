@@ -22,7 +22,7 @@ const Education = ({ educationState, handleChange }) => {
 
       <Input 
         type={"text"}
-        labelText={"When started: "}
+        labelText={"When Started: "}
         name={"startDate"}
         value={educationState.startDate}
         onChange={handleChange}
@@ -31,7 +31,7 @@ const Education = ({ educationState, handleChange }) => {
 
       <Input 
         type={"text"}
-        labelText={"When finished: "}
+        labelText={"When Finished: "}
         name={"finishDate"}
         value={educationState.finishDate}
         onChange={handleChange}

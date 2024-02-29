@@ -1,4 +1,4 @@
-.generalSection, .educationSection {
+.generalSection, .educationSection, .experienceSection {
     display: flex;
     flex-direction: column;
     gap: 10px;
