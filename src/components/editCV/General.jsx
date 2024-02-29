@@ -4,21 +4,23 @@ import Input from "../Input"
 const General = ({ generalState, handleChange }) => {
   return (
     <section className="generalSection">
-      <Input 
-        type={"text"}
-        labelText={"First Name: "}
-        name={"firstName"}
-        value={generalState.firstName}
-        onChange={handleChange}
-      />
+      <div className="pairInputs">
+        <Input 
+          type={"text"}
+          labelText={"First Name: "}
+          name={"firstName"}
+          value={generalState.firstName}
+          onChange={handleChange}
+        />
 
-      <Input 
-        type={"text"}
-        labelText={"Last Name: "}
-        name={"lastName"}
-        value={generalState.lastName}
-        onChange={handleChange}
-      />
+        <Input 
+          type={"text"}
+          labelText={"Last Name: "}
+          name={"lastName"}
+          value={generalState.lastName}
+          onChange={handleChange}
+        />
+      </div>
 
       <Input 
         type={"email"}

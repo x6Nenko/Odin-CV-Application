@@ -102,24 +102,39 @@ const App = () => {
               generalState={general}
               handleChange={handleGeneralChanges}
             />
-            {education.map((entry, index) => (
-              <Education 
-                key={index}
-                educationState={entry}
-                handleChange={event => handleEducationChanges(event, index)}
-              >
-                {index === 0 && <button onClick={handleAddMoreEducationBtn}>Add more</button>}
-              </Education>
-            ))}
-            {experience.map((entry, index) => (
-              <Experience 
-                key={index}
-                experienceState={entry}
-                handleChange={event => handleExperienceChanges(event, index)}
-              >
-                {index === 0 && <button onClick={handleAddMoreExperienceBtn}>Add more</button>}
-              </Experience>
-            ))}
+
+            <div className='pairSections'>
+              <div className='educationWrapper'>
+                {education.map((entry, index) => (
+                  <Education 
+                    key={index}
+                    educationState={entry}
+                    handleChange={event => handleEducationChanges(event, index)}
+                  >
+                    {index === 0 && 
+                      <>
+                        <div>
+                          <h2>Educational Experience</h2>
+                        </div>
+                        <button onClick={handleAddMoreEducationBtn} className='addMoreBtn'>Add more</button>
+                      </>
+                    }
+                  </Education>
+                ))}
+              </div>
+
+              <div className='experienceWrapper'>
+                {experience.map((entry, index) => (
+                  <Experience 
+                    key={index}
+                    experienceState={entry}
+                    handleChange={event => handleExperienceChanges(event, index)}
+                  >
+                    {index === 0 && <button onClick={handleAddMoreExperienceBtn} className='addMoreBtn'>Add more</button>}
+                  </Experience>
+                ))}
+              </div>
+            </div>
           </>
         }
 

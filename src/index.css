@@ -22,3 +22,7 @@
     width: 1px !important;
     white-space: nowrap !important;
 }
+
+body, button, input, textarea {
+    font-family: "Inter", sans-serif;
+}

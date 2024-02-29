@@ -2,3 +2,37 @@
     margin: 30px auto 0;
     max-width: 1024px;
 }
+
+.educationWrapper {
+    background-color: #effff6;
+    border-radius: 30px;
+    height: fit-content;
+    padding: 10px;
+}
+
+.experienceWrapper {
+    background-color: #eff3ff;
+    border-radius: 30px;
+    height: fit-content;
+    padding: 10px;
+}
+
+.educationWrapper, .experienceWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 45px;
+}
+
+.pairSections {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+button {
+    padding: 10px 30px;
+    width: fit-content;
+    
+}
