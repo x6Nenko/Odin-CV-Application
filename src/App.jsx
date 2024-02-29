@@ -67,6 +67,25 @@ const App = () => {
     }))
   }
 
+  function handleAddMoreEducationBtn() {
+    setEducation([...education, {
+      schoolName: '',
+      title: '',
+      startDate: '',
+      finishDate: ''
+    }])
+  }
+
+  function handleAddMoreExperienceBtn() {
+    setExperience([...experience, {
+      companyName: '',
+      position: '',
+      responsibilities: '',
+      startDate: '',
+      finishDate: ''
+    }])
+  }
+
   return (
     <>
       <Navbar 
@@ -89,7 +108,7 @@ const App = () => {
                 educationState={entry}
                 handleChange={event => handleEducationChanges(event, index)}
               >
-                <button>Add more</button>
+                {index === 0 && <button onClick={handleAddMoreEducationBtn}>Add more</button>}
               </Education>
             ))}
             {experience.map((entry, index) => (
@@ -97,7 +116,9 @@ const App = () => {
                 key={index}
                 experienceState={entry}
                 handleChange={event => handleExperienceChanges(event, index)}
-              />
+              >
+                {index === 0 && <button onClick={handleAddMoreExperienceBtn}>Add more</button>}
+              </Experience>
             ))}
           </>
         }

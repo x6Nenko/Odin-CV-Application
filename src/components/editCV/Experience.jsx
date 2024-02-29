@@ -1,9 +1,10 @@
 import "../../styles/editCV.css"
 import Input from "../Input"
 
-const Experience = ({ experienceState, handleChange }) => {
+const Experience = ({ experienceState, handleChange, children }) => {
   return (
     <section className="experienceSection">
+      {children}
       <Input 
         type={"text"}
         labelText={"Company  Name: "}
