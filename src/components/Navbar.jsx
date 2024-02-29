@@ -8,7 +8,7 @@ const Navbar = ({ handleClick }) => {
     <header className="header">
       <nav className="navbar">
         <div className="logo">
-          <h1>CV Generator</h1>
+          <h1>Fast CV</h1>
           <a href="#" target="_blank">
             <img src={githubIcon} alt="github" className="icon" aria-hidden="true" />
             <span className="sr-only">Github (opens in new tab)</span>

@@ -15,20 +15,24 @@ const App = () => {
     phone: '+77 777 777'
   })
 
-  const [education, setEducation] = useState({
-    schoolName: 'The Odin Project',
-    title: 'Full-stack developer',
-    startDate: '06/2023',
-    finishDate: '??/2024'
-  })
+  const [education, setEducation] = useState([
+    {
+      schoolName: 'The Odin Project',
+      title: 'Full-stack developer',
+      startDate: '06/2023',
+      finishDate: '??/2024'
+    }
+  ])
 
-  const [experience, setExperience] = useState({
-    companyName: 'Random Name',
-    position: 'Full-stack developer',
-    responsibilities: '- Creating nice websites;\n- Creating accesible websites;\n- Creating functional websites;',
-    startDate: '2024',
-    finishDate: 'Still working'
-  })
+  const [experience, setExperience] = useState([
+    {
+      companyName: 'Random Name',
+      position: 'Full-stack developer',
+      responsibilities: '- Creating nice websites;\n- Creating accesible websites;\n- Creating functional websites;',
+      startDate: '2024',
+      finishDate: 'Still working'
+    }
+  ])
 
   function handleModeChange(newMode) {
     setMode(newMode)
@@ -41,18 +45,26 @@ const App = () => {
     })
   }
 
-  function handleEducationChanges(e) {
-    setEducation({
-      ...education,
-      [e.target.name]: e.target.value
-    })
+  function handleEducationChanges(e, index) {
+    setEducation(education.map((entry, j) => {
+      if (j === index) {
+        // Create a *new* object with changes
+        return {...entry, [e.target.name]: e.target.value}
+      } else {
+        // No changes
+        return entry
+      }
+    }))
   }
 
-  function handleExperienceChanges(e) {
-    setExperience({
-      ...experience,
-      [e.target.name]: e.target.value
-    })
+  function handleExperienceChanges(e, index) {
+    setExperience(experience.map((entry, j) => {
+      if (j === index) {
+        return {...entry, [e.target.name]: e.target.value}
+      } else {
+        return entry
+      }
+    }))
   }
 
   return (
@@ -71,14 +83,22 @@ const App = () => {
               generalState={general}
               handleChange={handleGeneralChanges}
             />
-            <Education 
-              educationState={education}
-              handleChange={handleEducationChanges}
-            />
-            <Experience 
-              experienceState={experience}
-              handleChange={handleExperienceChanges}
-            />
+            {education.map((entry, index) => (
+              <Education 
+                key={index}
+                educationState={entry}
+                handleChange={event => handleEducationChanges(event, index)}
+              >
+                <button>Add more</button>
+              </Education>
+            ))}
+            {experience.map((entry, index) => (
+              <Experience 
+                key={index}
+                experienceState={entry}
+                handleChange={event => handleExperienceChanges(event, index)}
+              />
+            ))}
           </>
         }
 

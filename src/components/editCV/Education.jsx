@@ -1,9 +1,10 @@
 import "../../styles/editCV.css"
 import Input from "../Input"
 
-const Education = ({ educationState, handleChange }) => {
+const Education = ({ educationState, handleChange, children }) => {
   return (
     <section className="educationSection">
+      {children}
       <Input 
         type={"text"}
         labelText={"School  Name: "}
