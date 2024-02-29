@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import General from './components/editCV/General'
+import Education from './components/editCV/Education'
 import './App.css'
 
 const App = () => {
@@ -11,6 +12,12 @@ const App = () => {
     email: 'fakeEmail@gmail.com',
     phone: '+77 777 777'
   })
+  const [education, setEducation] = useState({
+    schoolName: 'The Odin Project',
+    title: 'Full-stack developer',
+    startDate: '06/2023',
+    finishDate: '??/2024'
+  })
 
   function handleModeChange(newMode) {
     setMode(newMode)
@@ -19,6 +26,13 @@ const App = () => {
   function handleGeneralChanges(e) {
     setGeneral({
       ...general,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  function handleEducationChanges(e) {
+    setEducation({
+      ...education,
       [e.target.name]: e.target.value
     })
   }
@@ -38,6 +52,10 @@ const App = () => {
             <General 
               generalState={general}
               handleChange={handleGeneralChanges}
+            />
+            <Education 
+              educationState={education}
+              handleChange={handleEducationChanges}
             />
           </>
         }
