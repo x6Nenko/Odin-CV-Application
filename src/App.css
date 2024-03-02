@@ -25,7 +25,37 @@
     padding: 10px;
 }
 
-.educationWrapper, .experienceWrapper, .generalWrapper {
+.placeholderWrapper {
+    background-image: linear-gradient(
+    135deg,
+    hsl(45deg 100% 97%) 0%,
+    hsl(69deg 66% 97%) 24%,
+    hsl(103deg 75% 97%) 35%,
+    hsl(137deg 92% 97%) 45%,
+    hsl(155deg 81% 97%) 55%,
+    hsl(180deg 52% 96%) 65%,
+    hsl(207deg 73% 96%) 76%,
+    hsl(225deg 100% 97%) 100%
+    );
+    border-radius: 30px;
+    height: auto;
+}
+
+.placeholderWrapper button {
+    margin: auto;
+    padding: 20px 60px;
+    border: 2px solid #121212;
+    background-color: #ffffff80;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.placeholderWrapper button:hover, .placeholderWrapper button:focus {
+    background-color: #ffffff;
+}
+
+.educationWrapper, .experienceWrapper, .generalWrapper, .placeholderWrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;

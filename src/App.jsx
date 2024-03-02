@@ -95,13 +95,19 @@ const App = () => {
       <div className='wrapper'>
         {mode === "edit" && 
           <>
-            <div className='generalWrapper'>
-              <General 
-                generalState={general}
-                handleChange={handleGeneralChanges}
-              >
-                <h2 className='sectionTitle generalTitle'>General Information</h2>
-              </General>
+            <div className='pairSections'>
+              <div className='generalWrapper'>
+                <General 
+                  generalState={general}
+                  handleChange={handleGeneralChanges}
+                >
+                  <h2 className='sectionTitle generalTitle'>General Information</h2>
+                </General>
+              </div>
+
+              <div className='placeholderWrapper'>
+                <button>Fill Demo CV</button>
+              </div>
             </div>
 
             <div className='pairSections'>
