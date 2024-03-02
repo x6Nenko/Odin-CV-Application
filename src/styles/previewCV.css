@@ -1,0 +1,51 @@
+.name {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    padding: 15px 0;
+}
+
+.contactIcon {
+    width: 16px;
+    height: fit-content;
+}
+
+.contact-holder {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.contact-holder, .companyInfo, .responsibilities {
+    color: #4e4e4e;
+}
+
+.experienceHeader {
+    margin: 30px 0 15px;
+    font-weight: 600;
+}
+
+.experienceItem {
+    display: flex;
+    gap: 80px;
+}
+
+.companyInfo {
+    max-width: 160px;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.educationTitleHolder {
+    display: flex;
+    align-items: center;
+}

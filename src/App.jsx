@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import General from './components/editCV/General'
 import Education from './components/editCV/Education'
 import Experience from './components/editCV/Experience'
+import Preview from './components/previewCV/Preview'
 import './App.css'
 
 const App = () => {
@@ -146,7 +147,7 @@ const App = () => {
                     {index === 0 && 
                     <>
                       <div className='sectionHeader'>
-                        <h2 className='sectionTitle'>Practical Experience</h2>
+                        <h2 className='sectionTitle'>Work Experience</h2>
                       </div>
                       <button onClick={handleAddMoreExperienceBtn} className='addMoreBtn'>Add more</button>
                     </>
@@ -160,7 +161,7 @@ const App = () => {
 
         {mode === "preview" && 
           <div>
-            Preview mode
+            <Preview />
           </div>
         }
       </div>
