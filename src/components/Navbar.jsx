@@ -15,8 +15,8 @@ const Navbar = ({ handleClick }) => {
           </a>
         </div>
         <div className="btns">
-          <button onClick={() => handleClick("edit")}>Edit CV</button>
-          <button onClick={() => handleClick("preview")}>Preview CV</button>
+          <button onClick={() => handleClick("edit")}>Edit</button>
+          <button onClick={() => handleClick("preview")}>Preview</button>
         </div>
       </nav>
     </header>

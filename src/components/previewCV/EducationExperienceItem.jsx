@@ -1,16 +1,16 @@
 import "../../styles/previewCV.css"
 
-const EducationExperienceItem = () => {
+const EducationExperienceItem = ({ entry }) => {
   return (
-    <div className="experienceItem">
-        <div className="companyInfo">
-            <p>Company Name</p>
-            <p>From - To</p>
-        </div>
-        <div className="educationTitleHolder">
-            <h3 className="title">Position title</h3>
-        </div>
-    </div>
+    <article className="experienceItem">
+      <div className="companyInfo">
+        <p>{entry.schoolName}</p>
+        <p>{entry.startDate} - {entry.finishDate}</p>
+      </div>
+      <div className="educationTitleHolder">
+        <h3 className="title">{entry.title}</h3>
+      </div>
+    </article>
   )
 }
 

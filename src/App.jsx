@@ -160,9 +160,7 @@ const App = () => {
         }
 
         {mode === "preview" && 
-          <div>
-            <Preview />
-          </div>
+          <Preview generalState={general} educationState={education} experienceState={experience} />
         }
       </div>
     </>
