@@ -11,6 +11,7 @@ const Experience = ({ experienceState, handleChange, children }) => {
         name={"companyName"}
         value={experienceState.companyName}
         onChange={handleChange}
+        placeHolder={"ABC Company"}
       />
 
       <Input 
@@ -19,6 +20,7 @@ const Experience = ({ experienceState, handleChange, children }) => {
         name={"position"}
         value={experienceState.position}
         onChange={handleChange}
+        placeHolder={"Software Engineer"}
       />
 
       <Input 
@@ -27,6 +29,7 @@ const Experience = ({ experienceState, handleChange, children }) => {
         name={"responsibilities"}
         value={experienceState.responsibilities}
         onChange={handleChange}
+        placeHolder={"Developed and maintained web applications"}
       />
 
       <div className="pairInputs">

@@ -12,6 +12,7 @@ const General = ({ generalState, handleChange, children }) => {
           name={"firstName"}
           value={generalState.firstName}
           onChange={handleChange}
+          placeHolder={"John"}
         />
 
         <Input 
@@ -20,6 +21,7 @@ const General = ({ generalState, handleChange, children }) => {
           name={"lastName"}
           value={generalState.lastName}
           onChange={handleChange}
+          placeHolder={"Doe"}
         />
       </div>
 
@@ -29,6 +31,7 @@ const General = ({ generalState, handleChange, children }) => {
         name={"email"}
         value={generalState.email}
         onChange={handleChange}
+        placeHolder={"fake.email@gmail.com"}
       />
 
       <Input 
@@ -37,6 +40,7 @@ const General = ({ generalState, handleChange, children }) => {
         name={"phone"}
         value={generalState.phone}
         onChange={handleChange}
+        placeHolder={"+12 345 67 89"}
       />
     </section>
   )

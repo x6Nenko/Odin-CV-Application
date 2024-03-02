@@ -6,7 +6,7 @@ import EducationExperienceItem from "./EducationExperienceItem"
 
 const Preview = ({ generalState, educationState, experienceState }) => {
   return (
-    <section>
+    <section className="previewSection">
       <article>
         <h1 className="name">{generalState.firstName} {generalState.lastName}</h1>
       </article>

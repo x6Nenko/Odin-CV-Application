@@ -10,28 +10,28 @@ const App = () => {
   const [mode, setMode] = useState("edit")
 
   const [general, setGeneral] = useState({
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'fakeEmail@gmail.com',
-    phone: '+77 777 777'
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: ''
   })
 
   const [education, setEducation] = useState([
     {
-      schoolName: 'The Odin Project',
-      title: 'Full-stack developer',
-      startDate: '06/2023',
-      finishDate: '??/2024'
+      schoolName: '',
+      title: '',
+      startDate: '',
+      finishDate: ''
     }
   ])
 
   const [experience, setExperience] = useState([
     {
-      companyName: 'Random Name',
-      position: 'Full-stack developer',
-      responsibilities: '- Creating nice websites;\n- Creating accesible websites;\n- Creating functional websites;',
-      startDate: '2024',
-      finishDate: 'Still working'
+      companyName: '',
+      position: '',
+      responsibilities: '',
+      startDate: '',
+      finishDate: ''
     }
   ])
 
@@ -87,6 +87,56 @@ const App = () => {
     }])
   }
 
+  function handleFillDemoCvBtn() {
+    setGeneral(
+      {
+        firstName: 'John',
+        lastName: 'Doe',
+        email: 'fake.email@gmail.com',
+        phone: '+12 345 67 89'
+      }
+    )
+
+    setEducation([
+      {
+        schoolName: 'The Odin Project',
+        title: 'Full-stack developer',
+        startDate: 'June 2023',
+        finishDate: 'Present'
+      },
+      {
+        schoolName: 'freeCodeCamp',
+        title: 'Full-stack developer',
+        startDate: 'September 2022',
+        finishDate: 'January 2023'
+      }
+    ])
+
+    setExperience([
+      {
+        companyName: 'ABC Company',
+        position: 'Software Engineer',
+        responsibilities: 'Developed and maintained web applications',
+        startDate: 'January 2020',
+        finishDate: 'Present'
+      },
+      {
+        companyName: 'XYZ Corporation',
+        position: 'Product Manager',
+        responsibilities: 'Managed product development lifecycle',
+        startDate: 'June 2018',
+        finishDate: 'December 2022'
+      },
+      {
+        companyName: 'Tech Innovations Ltd.',
+        position: 'Senior Software Developer',
+        responsibilities: 'Led backend development projects',
+        startDate: 'March 2016',
+        finishDate: 'May 2021'
+      }
+    ])
+  }
+
   return (
     <>
       <Navbar 
@@ -107,7 +157,7 @@ const App = () => {
               </div>
 
               <div className='placeholderWrapper'>
-                <button>Fill Demo CV</button>
+                <button onClick={handleFillDemoCvBtn}>Fill Demo CV</button>
               </div>
             </div>
 

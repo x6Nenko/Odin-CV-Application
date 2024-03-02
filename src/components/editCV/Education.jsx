@@ -11,6 +11,7 @@ const Education = ({ educationState, handleChange, children }) => {
         name={"schoolName"}
         value={educationState.schoolName}
         onChange={handleChange}
+        placeHolder={"The Odin Project"}
       />
 
       <Input 
@@ -19,6 +20,7 @@ const Education = ({ educationState, handleChange, children }) => {
         name={"title"}
         value={educationState.title}
         onChange={handleChange}
+        placeHolder={"Full-stack developer"}
       />
 
       <div className="pairInputs">

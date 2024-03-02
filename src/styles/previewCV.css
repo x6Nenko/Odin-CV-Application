@@ -1,3 +1,7 @@
+.previewSection {
+    margin-top: 75px;
+}
+
 .name {
     font-size: 2rem;
     text-align: center;
@@ -39,7 +43,8 @@
 }
 
 .companyInfo {
-    min-width: 200px;
+    min-width: 260px;
+    max-width: 260px;
 }
 
 .title {
