@@ -29,8 +29,27 @@ section {
     margin-bottom: 20px;
 }
 
+.addMoreBtnHolder {
+    border-bottom: 1px solid #d1d1d1;
+}
+
 .addMoreBtn {
+    display: block;
     margin: 0 auto 20px;
+}
+
+.removeBtn {
+    display: block;
+    margin: auto;
+    background-color: #ffc8c899;
+    color: #121212;
+    font-weight: 600;
+    border: 1px solid #121212;
+}
+
+.removeBtn:hover, .removeBtn:focus {
+    background-color: #ffc8c8;
+    color: #121212;
 }
 
 .entryIndex {

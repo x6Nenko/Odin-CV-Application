@@ -87,6 +87,18 @@ const App = () => {
     }])
   }
 
+  function handleRemoveEducationEntryBtn(i) {
+    setEducation(
+      education.filter((entry, index) => i !== index)
+    )
+  }
+
+  function handleRemoveExperienceEntryBtn(i) {
+    setExperience(
+      experience.filter((entry, index) => i !== index)
+    )
+  }
+
   function handleFillDemoCvBtn() {
     setGeneral(
       {
@@ -177,8 +189,15 @@ const App = () => {
                       <div className='sectionHeader'>
                         <h2 className='sectionTitle'>Educational Experience</h2>
                       </div>
-                      <button onClick={handleAddMoreEducationBtn} className='addMoreBtn'>Add more</button>
+                      <div className='addMoreBtnHolder'>
+                        <button onClick={handleAddMoreEducationBtn} className='addMoreBtn'>Add more</button>
+                      </div>
                     </>
+                    }
+                    {education.length > 1 && 
+                      <div className='removeBtnHolder'>
+                        <button className='removeBtn' onClick={() => handleRemoveEducationEntryBtn(index)}>Remove entry</button>
+                      </div>
                     }
                   </Education>
                 ))}
@@ -199,8 +218,15 @@ const App = () => {
                       <div className='sectionHeader'>
                         <h2 className='sectionTitle'>Work Experience</h2>
                       </div>
-                      <button onClick={handleAddMoreExperienceBtn} className='addMoreBtn'>Add more</button>
+                      <div className='addMoreBtnHolder'>
+                        <button onClick={handleAddMoreExperienceBtn} className='addMoreBtn'>Add more</button>
+                      </div>
                     </>
+                    }
+                    {experience.length > 1 && 
+                      <div className='removeBtnHolder'>
+                        <button className='removeBtn' onClick={() => {handleRemoveExperienceEntryBtn(index)}}>Remove entry</button>
+                      </div>
                     }
                   </Experience>
                 ))}
