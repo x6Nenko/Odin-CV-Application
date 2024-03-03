@@ -30,3 +30,18 @@
     width: 32px;
     height: fit-content;
 }
+
+@media screen and (max-width: 1050px) {
+    .header {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        height: fit-content;
+        padding: 20px 0;
+    }
+}
