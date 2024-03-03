@@ -57,6 +57,11 @@
     align-items: center;
 }
 
+.downloadBtn {
+    display: block;
+    margin-left: auto;
+}
+
 @media screen and (max-width: 760px) {
     .experienceItem {
         flex-direction: column;
@@ -70,5 +75,12 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .downloadBtn {
+        display: block;
+        margin: auto;
     }
 }
