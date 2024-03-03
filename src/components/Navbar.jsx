@@ -9,7 +9,7 @@ const Navbar = ({ handleClick }) => {
       <nav className="navbar">
         <div className="logo">
           <h1>Fast CV</h1>
-          <a href="#" target="_blank">
+          <a href="https://github.com/x6Nenko/Odin-CV-Application" target="_blank">
             <img src={githubIcon} alt="github" className="icon" aria-hidden="true" />
             <span className="sr-only">Github (opens in new tab)</span>
           </a>
