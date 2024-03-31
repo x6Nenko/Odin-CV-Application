@@ -1,8 +1,8 @@
-# React + Vite
+## Project tasks.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [x] Include next sections:
+  - [x] A section to add general information like name, email and phone number.
+  - [x] A section to add your educational experience (school name, title of study and date of study)
+  - [x] A section to add practical experience (company name, position title, main responsibilities of your jobs, date from and until when you worked for that company)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [x] Include an edit and submit button for each section or for the whole CV. (heavy use of state and props) 
